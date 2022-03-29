@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%\pdfminorversion=4
+	% NOTE: To produce blinded version, replace "0" with "1" below.
+	\newcommand{\blind}{0}
+	
+	%%%%%%% IISE Transactions margin specifications %%%%%%%%%%%%%%%%%%%
+	% DON'T change margins - should be 1 inch all around.
+	\addtolength{\oddsidemargin}{-.5in}%
+	\addtolength{\evensidemargin}{-.5in}%
+	\addtolength{\textwidth}{1in}%
+	\addtolength{\textheight}{1.3in}%
+	\addtolength{\topmargin}{-.8in}%
+    \makeatletter
+    \renewcommand\section{\@startsection {section}{1}{\z@}%
+                                       {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                       {2.3ex \@plus.2ex}%
+                                       {\normalfont\fontfamily{phv}\fontsize{16}{19}\bfseries}}
+    \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                         {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                         {1.5ex \@plus .2ex}%
+                                         {\normalfont\fontfamily{phv}\fontsize{14}{17}\bfseries}}
+    \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                        {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                         {1.5ex \@plus .2ex}%
+                                         {\normalfont\normalsize\fontfamily{phv}\fontsize{14}{17}\selectfont}}
+    \makeatother
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%% IISE Transactions package list %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\usepackage{amsmath}
+	\usepackage{graphicx}
+	\usepackage{enumerate}
+	\usepackage{natbib} %comment out if you do not have the package
+	\usepackage{url} % not crucial - just used below for the URL
+	\usepackage{hyperref}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%% Author package list and commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%% Here are some examples %%%%%%%%%%%%%%
+	%	\usepackage{amsfonts, amsthm, latexsym, amssymb}
+	%	\usepackage{lineno}
+	%	\newcommand{\mb}{\mathbf}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	\begin{document}
+		
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\def\spacingset#1{\renewcommand{\baselinestretch}%
+			{#1}\small\normalsize} \spacingset{1}
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\if0\blind
+		{
+			\title{\bf PS7}
+			
+			\author{ William Townsend  \\
+			Department of Economics, The University of Oklahoma, Norman\\
+             }
+			\date{\today}
+			\maketitle
+		} \fi
+		
+		\if1\blind
+		{
+
+            \title{\bf \emph{} \LaTeX \ Template}
+			\author{Author information is purposely removed for double-blind review}
+			
+\bigskip
+			\bigskip
+			\bigskip
+			\begin{center}
+				{\LARGE\bf \emph{IISE Transactions} \LaTeX \ Template}
+			\end{center}
+			\medskip
+		} \fi
+		\bigskip
+		
+%		
+%	\begin{abstract}
+%This document provides a \LaTeX \ template for \emph{IISE Transactions}. Your paper should be compiled in the following order: title; abstract; keywords; main text, including an introduction and a conclusion or summary; acknowledgments; declaration of interest statement; references; appendices (as appropriate). Figures and tables should be inserted into the text as close to first mention as possible (NOT appended to the end of the manuscript). In-text citations and the reference list must follow \emph{IISE Transactions} guidelines. Use 11 point font, 1 inch margins, and double-spacing for the manuscript. A typical paper for this journal should be no more than 30 pages in manuscript format, counting from the title page to references. Appendices should be included as supplemental online materials. Do not use footnotes. \emph{IISE Transactions} uses a double-blind review process. Please make sure that you submit the \textbf{blind version} of your manuscript, which does not contain any information identifying the authors.  This includes removing the authors information on the title page as well as the information that may be identifying in the Acknowledgment section. We thank you for your attention to these details.
+%	\end{abstract}
+%			
+%	\noindent%
+%	{\it Keywords:} \emph{IISE Transactions}; \LaTeX; Manuscript format; Taylor \& Francis.
+%
+%	%\newpage
+%	\spacingset{1.5} % DON'T change the spacing!
+\section{Problem 8}
+
+My project is going okay so far. I'm trying to figure out a good model for causal factors of crime in Mexico. I have been fidgeting with scraping data from Wikipedia on state phenomena, but mostly I've been collecting data from INEGI. At the moment, I'm trying to see how I can assess the impacts of avocado price on homicides. Also, I'm trying to see if a US deportation shock of Mexican immigrants impacts homicides and/or property crime in Mexico.  In truth, I still have a lot of work to do. I think I can find a way to apply a differences in differences model in some fashion though. 
+\section{Table}
+
+From these models we can see that $\hat{\beta}_1$ is not estimated well. We vary from 0.062 to 0.050. Applying the mean method in model 2 does not yield accurate results, nor does the mice method and imputation process. We get the same results in model 1 and 3. We also get the same coefficient in model 2 and 4. Regardless, all four coefficients are inaccurate. The last two coeffecients are 0.062 and 0.052 for models 3 and 4, respectively. Both are statistically significant with a 99 percent confidence.
+
+\begin{table}
+\centering
+\begin{tabular}[t]{lcccc}
+\toprule
+  & Model 1 & Model 2 & Model 3 & Model 4\\
+\midrule
+(Intercept) & \num{0.534}*** & \num{0.708}*** & \num{0.534}*** & \num{0.708}***\\
+ & (\num{0.146}) & (\num{0.116}) & (\num{0.112}) & (\num{0.116})\\
+hgc & \num{0.062}*** & \num{0.050}*** & \num{0.062}*** & \num{0.050}***\\
+ & (\num{0.005}) & (\num{0.004}) & (\num{0.004}) & \vphantom{1} (\num{0.004})\\
+collegenot college grad & \num{0.145}*** & \num{0.168}*** & \num{0.145}*** & \num{0.168}***\\
+ & (\num{0.034}) & (\num{0.026}) & (\num{0.025}) & (\num{0.026})\\
+tenure & \num{0.050}*** & \num{0.038}*** & \num{0.050}*** & \num{0.038}***\\
+ & (\num{0.005}) & (\num{0.004}) & (\num{0.004}) & (\num{0.004})\\
+tenure\_sqrd & \num{-0.002}*** & \num{-0.001}*** & \num{-0.002}*** & \num{-0.001}***\\
+ & (\num{0.000}) & (\num{0.000}) & (\num{0.000}) & (\num{0.000})\\
+age & \num{0.000} & \num{0.000} & \num{0.000} & \num{0.000}\\
+ & (\num{0.003}) & (\num{0.002}) & (\num{0.002}) & (\num{0.002})\\
+marriedsingle & \num{-0.022} & \num{-0.027}* & \num{-0.022}+ & \num{-0.027}*\\
+ & (\num{0.018}) & (\num{0.014}) & (\num{0.013}) & (\num{0.014})\\
+\midrule
+Num.Obs. & \num{1669} & \num{2229} & \num{2229} & \num{2229}\\
+R2 & \num{0.208} & \num{0.147} & \num{0.277} & \num{0.147}\\
+R2 Adj. & \num{0.206} & \num{0.145} & \num{0.275} & \num{0.145}\\
+AIC & \num{1179.9} & \num{1091.2} & \num{925.5} & \num{1091.2}\\
+BIC & \num{1223.2} & \num{1136.8} & \num{971.1} & \num{1136.8}\\
+Log.Lik. & \num{-581.936} & \num{-537.580} & \num{-454.737} & \num{-537.580}\\
+F & \num{72.917} & \num{63.973} & \num{141.686} & \num{63.973}\\
+RMSE & \num{0.34} & \num{0.31} & \num{0.30} & \num{0.31}\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}+ p $<$ 0.1, * p $<$ 0.05, ** p $<$ 0.01, *** p $<$ 0.001}\\
+\end{tabular}
+\end{table}
+
+\end{document}
