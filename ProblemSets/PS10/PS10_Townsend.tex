@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%\pdfminorversion=4
+	% NOTE: To produce blinded version, replace "0" with "1" below.
+	\newcommand{\blind}{0}
+	
+	%%%%%%% IISE Transactions margin specifications %%%%%%%%%%%%%%%%%%%
+	% DON'T change margins - should be 1 inch all around.
+	\addtolength{\oddsidemargin}{-.5in}%
+	\addtolength{\evensidemargin}{-.5in}%
+	\addtolength{\textwidth}{1in}%
+	\addtolength{\textheight}{1.3in}%
+	\addtolength{\topmargin}{-.8in}%
+    \makeatletter
+    \renewcommand\section{\@startsection {section}{1}{\z@}%
+                                       {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                       {2.3ex \@plus.2ex}%
+                                       {\normalfont\fontfamily{phv}\fontsize{16}{19}\bfseries}}
+    \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                         {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                         {1.5ex \@plus .2ex}%
+                                         {\normalfont\fontfamily{phv}\fontsize{14}{17}\bfseries}}
+    \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                        {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                         {1.5ex \@plus .2ex}%
+                                         {\normalfont\normalsize\fontfamily{phv}\fontsize{14}{17}\selectfont}}
+    \makeatother
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%% IISE Transactions package list %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\usepackage{amsmath}
+	\usepackage{graphicx}
+	\usepackage{enumerate}
+	\usepackage{natbib} %comment out if you do not have the package
+	\usepackage{url} % not crucial - just used below for the URL
+	\usepackage{hyperref}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%%%%% Author package list and commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%% Here are some examples %%%%%%%%%%%%%%
+	%	\usepackage{amsfonts, amsthm, latexsym, amssymb}
+	%	\usepackage{lineno}
+	%	\newcommand{\mb}{\mathbf}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	% If you're new to LaTeX, here's some short tutorials:
+% https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
+% https://en.wikibooks.org/wiki/LaTeX/Basics
+
+% Formatting
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage[titletoc,title]{appendix}
+\usepackage{booktabs}
+\usepackage{stfloats}
+
+% Math
+% https://www.overleaf.com/learn/latex/Mathematical_expressions
+% https://en.wikibooks.org/wiki/LaTeX/Mathematics
+\usepackage{amsmath,amsfonts,amssymb,mathtools}
+
+% Images
+% https://www.overleaf.com/learn/latex/Inserting_Images
+% https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+\usepackage{graphicx,float}
+\usepackage[utf8]{inputenc}
+
+% Tables
+% https://www.overleaf.com/learn/latex/Tables
+% https://en.wikibooks.org/wiki/LaTeX/Tables
+
+% Algorithms
+% https://www.overleaf.com/learn/latex/algorithms
+% https://en.wikibooks.org/wiki/LaTeX/Algorithms
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{algorithmic}
+
+% Code syntax highlighting
+% https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
+\usepackage{minted}
+\usemintedstyle{borland}
+	
+	\begin{document}
+		
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\def\spacingset#1{\renewcommand{\baselinestretch}%
+			{#1}\small\normalsize} \spacingset{1}
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\if0\blind
+		{
+			\title{\bf PS10}
+			
+			\author{ William Townsend  \\
+			Department of Economics, The University of Oklahoma, Norman\\
+             }
+			\date{\today}
+			\maketitle
+		} \fi
+		
+		\if1\blind
+		{
+
+            \title{\bf \emph{} \LaTeX \ Template}
+			\author{Author information is purposely removed for double-blind review}
+			
+\bigskip
+			\bigskip
+			\bigskip
+			\begin{center}
+				{\LARGE\bf \emph{IISE Transactions} \LaTeX \ Template}
+			\end{center}
+			\medskip
+		} \fi
+		\bigskip
+		
+%		
+%	\begin{abstract}
+%This document provides a \LaTeX \ template for \emph{IISE Transactions}. Your paper should be compiled in the following order: title; abstract; keywords; main text, including an introduction and a conclusion or summary; acknowledgments; declaration of interest statement; references; appendices (as appropriate). Figures and tables should be inserted into the text as close to first mention as possible (NOT appended to the end of the manuscript). In-text citations and the reference list must follow \emph{IISE Transactions} guidelines. Use 11 point font, 1 inch margins, and double-spacing for the manuscript. A typical paper for this journal should be no more than 30 pages in manuscript format, counting from the title page to references. Appendices should be included as supplemental online materials. Do not use footnotes. \emph{IISE Transactions} uses a double-blind review process. Please make sure that you submit the \textbf{blind version} of your manuscript, which does not contain any information identifying the authors.  This includes removing the authors information on the title page as well as the information that may be identifying in the Acknowledgment section. We thank you for your attention to these details.
+%	\end{abstract}
+%			
+%	\noindent%
+%	{\it Keywords:} \emph{IISE Transactions}; \LaTeX; Manuscript format; Taylor \& Francis.
+%
+%	%\newpage
+%	\spacingset{1.5} % DON'T change the spacing!
+
+
+
+
+
+
+\section{Question No. 9}
+
+Some of my results took a decent time to run in R. The SVM results were taking too long to run. Thus, they aren't included on the table. As far as the estimates are concerned, they are very close to one another. This is a good sign for the validity of our results!
+
+\begin{table}[hbt!]
+\centering
+\begin{tabular}[t]{llllllll}
+\toprule
+penalty & .estimate & alg & cost\_complexity & tree\_depth & min\_n & hidden\_units & neighbors\\
+\midrule
+0.00 & 0.85 & logit &  &  &  &  & \\
+ & 0.87 & tree & 0.00 & 15.00 & 10.00 &  & \\
+0.08 & 0.84 & nnet &  &  &  & 3.00 & \\
+ & 0.85 & knn &  &  &  &  & 27.00\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
